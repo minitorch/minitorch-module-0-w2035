@@ -146,7 +146,7 @@ def negList(arr: Iterable):
     return map(arr, neg)
 
 def addLists(arr1: Iterable, arr2: Iterable):
-    return list(arr1) + list(arr2)
+    return [x[0] + x[1] for x in zipWith(arr1, arr2)]
 
 def sum(arr: Iterable):
     def sum(current: float, x: float):
